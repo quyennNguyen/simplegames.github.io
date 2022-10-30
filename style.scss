@@ -1,0 +1,67 @@
+@import "variables";
+@import "config";
+
+body {
+    min-width: 700px;
+    overflow-x: scroll;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 5vh 90vh 5vh;
+    color: $color-3;
+    background: $color-1;
+    @include body;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+header {
+    grid-area: 1 / 1 / span 1 / span 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-1;
+    background: $color-3;
+
+    .title {
+        @include title;
+    }
+
+    .menu-nav {        
+
+        a {
+            margin: 0 20px;
+            @include link;
+        }
+    }
+}
+
+main {
+    grid-area: 2 / 1 / span 1 / span 1;
+    height: 100%;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+        background: rgba($color-3, 0.3);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 20px;
+        background: $color-3;
+    }
+
+    section {
+        width: 100%;
+        min-height: 90vh;
+        max-height: fit-content;
+    }
+}
+
+footer {
+    grid-area: 3 / 1 / span 1 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
