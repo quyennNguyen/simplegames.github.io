@@ -28,7 +28,7 @@ header {
         @include title;
     }
 
-    .menu-nav {        
+    .menu-nav {
 
         a {
             margin: 0 20px;
@@ -56,6 +56,41 @@ main {
         width: 100%;
         min-height: 90vh;
         max-height: fit-content;
+    }
+
+    #rps {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+
+        .title {
+            @include subtitle;
+        }
+
+        .computer-choice,
+        .your-choice {
+            margin: 30px;
+
+            button {
+                @include button;
+            }
+        }
+
+        .result {
+            margin-top: 50px;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+
+            #result {
+                border: solid;
+                border-radius: 20px;
+                padding: 20px 30px;
+                @include title;
+            }
+        }
     }
 }
 
