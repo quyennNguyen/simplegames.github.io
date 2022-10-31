@@ -16,24 +16,37 @@ const targets = [
   compScissor,
 ];
 
+// const setInput = document.getElementById("set-input");
+// let numOfSets = setInput.innerText;
+
+const compScore = document.getElementById("comp-score");
+const yourScore = document.getElementById("your-score");
+const scoreRecord = {
+  cScore: 0,
+  yScore: 0,
+};
+
 const result = document.getElementById("result");
 
 const chooseRock = () => {
   untarget();
   target(yourRock);
-  displayResult(getScore("rock", compChoice()));
+  let score = getScore("rock", compChoice());
+  displayResult(score);
 };
 
 const choosePaper = () => {
   untarget();
   target(yourPaper);
-  displayResult(getScore("paper", compChoice()));
+  let score = getScore("paper", compChoice());
+  displayResult(score);
 };
 
 const chooseScissor = () => {
   untarget();
   target(yourScissor);
-  displayResult(getScore("scissor", compChoice()));
+  let score = getScore("scissor", compChoice());
+  displayResult(score);
 };
 
 const target = (target) => {
@@ -78,10 +91,22 @@ const getScore = (yourChoice, compChoice) => {
 
 const displayResult = (score) => {
   if (score == 0) {
+    scoreRecord.cScore -= score;
+    compScore.innerText = scoreRecord.cScore;
+    scoreRecord.yScore += score;
+    yourScore.innerText = scoreRecord.yScore;
     result.innerText = "Tie!";
   } else if (score == 1) {
+    scoreRecord.cScore -= score;
+    compScore.innerText = scoreRecord.cScore;
+    scoreRecord.yScore += score;
+    yourScore.innerText = scoreRecord.yScore;
     result.innerText = "You Won!";
   } else {
+    scoreRecord.cScore -= score;
+    compScore.innerText = scoreRecord.cScore;
+    scoreRecord.yScore += score;
+    yourScore.innerText = scoreRecord.yScore;
     result.innerText = "You Lost!";
   }
 };

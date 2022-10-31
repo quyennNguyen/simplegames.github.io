@@ -2,7 +2,7 @@
 @import "config";
 
 body {
-    min-width: 700px;
+    min-width: 1100px;
     overflow-x: scroll;
     display: grid;
     grid-template-columns: auto;
@@ -60,34 +60,44 @@ main {
 
     #rps {
         display: flex;
-        flex-flow: column;
         justify-content: center;
         align-items: center;
+        @include subtitle;
 
-        .title {
-            @include subtitle;
-        }
-
-        .computer-choice,
-        .your-choice {
+        .record-board {
             margin: 30px;
+            
+            form {
+                margin: 30px;
+            }
 
             button {
                 @include button;
+                @include subtitle;
+            }
+
+            fieldset {
+                padding: 20px;
+            }
+
+            #result {
+                @include title;
             }
         }
 
-        .result {
-            margin-top: 50px;
+        .play-station {
+            margin: 30px;
             display: flex;
             flex-flow: column;
             justify-content: center;
             align-items: center;
 
-            #result {
-                border: solid;
-                border-radius: 20px;
-                padding: 20px 30px;
+            div {
+                margin: 30px;
+            }
+
+            button {
+                @include button;
                 @include title;
             }
         }

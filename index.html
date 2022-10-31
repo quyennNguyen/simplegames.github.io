@@ -30,34 +30,61 @@
         </section>
 
         <section id="rps">
-            <div class="title">COMPUTER</div>
-            <div class="computer-choice">
-                <button id="comp-rock">
-                    <i class="fa-regular fa-hand-back-fist"></i>
-                </button>
-                <button id="comp-paper">
-                    <i class="fa-regular fa-hand"></i>
-                </button>
-                <button id="comp-scissor">
-                    <i class="fa-regular fa-hand-scissors"></i>
-                </button>
+            <div class="record-board">
+                <!-- <form>
+                    <label>Number of Sets</label>
+                    <span>
+                        <button onclick="increaseSet()">+</button>
+                        <span id="set-input">1</span>
+                        <button onclick="decreaseSet()">-</button>
+                    </span>
+                </form> -->
+                <form>
+                    <fieldset>
+                        <legend>Score</legend>
+                        <p>
+                            <label for="comp-score">COMPUTER</label>
+                            <span id="comp-score">0</span>
+                        </p>
+                        <p>
+                            <label for="your-score">YOU</label>
+                            <span id="your-score">0</span>
+                        </p>
+                    </fieldset>
+                </form>
+                <form>
+                    <fieldset>
+                        <legend>Result</legend>
+                        <p id="result"></p>
+                    </fieldset>
+                </form>
             </div>
-            <div>-------------------------------------------------------</div>
-            <div class="your-choice">
-                <button id="your-rock" onclick="chooseRock()">
-                    <i class="fa-regular fa-hand-back-fist"></i>
-                </button>
-                <button id="your-paper" onclick="choosePaper()">
-                    <i class="fa-regular fa-hand"></i>
-                </button>
-                <button id="your-scissor" onclick="chooseScissor()">
-                    <i class="fa-regular fa-hand-scissors"></i>
-                </button>
-            </div>
-            <div class="title">YOU</div>
-            <div class="result">
-                <div class="title">Result</div>
-                <div id="result">Let's Go</div>
+            <div class="play-station">
+                <div>COMPUTER</div>
+                <div>
+                    <button id="comp-rock">
+                        <i class="fa-regular fa-hand-back-fist"></i>
+                    </button>
+                    <button id="comp-paper">
+                        <i class="fa-regular fa-hand"></i>
+                    </button>
+                    <button id="comp-scissor">
+                        <i class="fa-regular fa-hand-scissors"></i>
+                    </button>
+                </div>
+                <div>-------------------------------------------------------</div>
+                <div>
+                    <button id="your-rock" onclick="chooseRock()">
+                        <i class="fa-regular fa-hand-back-fist"></i>
+                    </button>
+                    <button id="your-paper" onclick="choosePaper()">
+                        <i class="fa-regular fa-hand"></i>
+                    </button>
+                    <button id="your-scissor" onclick="chooseScissor()">
+                        <i class="fa-regular fa-hand-scissors"></i>
+                    </button>
+                </div>
+                <div>YOU</div>
             </div>
         </section>
     </main>
