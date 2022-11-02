@@ -14,79 +14,28 @@
     <header>
         <h1 class="title">QQ</h1>
         <nav class="menu-nav">
-            <a href="#tic-tac-toe">Tic Tac Toe</a>
-            <a href="#blackjack">BlackJack</a>
-            <a href="#rps">Rock Paper Scissor</a>
+            <!-- <a href="#tic-tac-toe">Tic Tac Toe</a>
+            <a href="#blackjack">BlackJack</a> -->
+            <!-- <a href="#rock-paper-scissor">Rock Paper Scissor</a>
+            <a href="#superhero-fight">SuperHero Fight</a> -->
         </nav>
     </header>
 
     <main>
-        <section id="tic-tac-toe">
-
-        </section>
-
-        <section id="blackjack">
-
-        </section>
-
-        <section id="rps">
-            <div class="record-board">
-                <!-- <form>
-                    <label>Number of Sets</label>
-                    <span>
-                        <button onclick="increaseSet()">+</button>
-                        <span id="set-input">1</span>
-                        <button onclick="decreaseSet()">-</button>
-                    </span>
-                </form> -->
-                <form>
-                    <fieldset>
-                        <legend>Score</legend>
-                        <p>
-                            <label for="comp-score">COMPUTER</label>
-                            <span id="comp-score">0</span>
-                        </p>
-                        <p>
-                            <label for="your-score">YOU</label>
-                            <span id="your-score">0</span>
-                        </p>
-                    </fieldset>
-                </form>
-                <form>
-                    <fieldset>
-                        <legend>Result</legend>
-                        <p id="result"></p>
-                    </fieldset>
-                </form>
-            </div>
-            <div class="play-station">
-                <div>COMPUTER</div>
-                <div>
-                    <button id="comp-rock">
-                        <i class="fa-regular fa-hand-back-fist"></i>
-                    </button>
-                    <button id="comp-paper">
-                        <i class="fa-regular fa-hand"></i>
-                    </button>
-                    <button id="comp-scissor">
-                        <i class="fa-regular fa-hand-scissors"></i>
-                    </button>
-                </div>
-                <div>-------------------------------------------------------</div>
-                <div>
-                    <button id="your-rock" onclick="chooseRock()">
-                        <i class="fa-regular fa-hand-back-fist"></i>
-                    </button>
-                    <button id="your-paper" onclick="choosePaper()">
-                        <i class="fa-regular fa-hand"></i>
-                    </button>
-                    <button id="your-scissor" onclick="chooseScissor()">
-                        <i class="fa-regular fa-hand-scissors"></i>
-                    </button>
-                </div>
-                <div>YOU</div>
-            </div>
-        </section>
+        <div class="game-card" id="rock-paper-scissor">
+            <img src="img/rps.jpg" alt="rock paper scissor">
+            <span>Rock Paper Scissor</span>
+            <a href="rps/rock-paper-scissor.html" target="_blank">
+                <i class="fa-paper-plane fa-solid"></i>
+            </a>
+        </div>
+        <div class="game-card" id="superhero-fight">
+            <img src="img/card fight.jpg" alt="superhero">
+            <span>SuperHero Card Fight</span>
+            <a href="superhero/superhero-fight.html" target="_blank">
+                <i class="fa-paper-plane fa-solid"></i>
+            </a>
+        </div>
     </main>
 
     <footer>
@@ -94,7 +43,6 @@
     </footer>
 
     <script src="https://kit.fontawesome.com/d83c12719b.js" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
 </body>
 
 </html>

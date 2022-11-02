@@ -5,11 +5,11 @@
 }
 
 body {
-  min-width: 1100px;
-  overflow-x: scroll;
+  min-width: 1000px;
+  overflow: scroll;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 5vh 90vh 5vh;
+  grid-template-rows: 5vh auto 5vh;
   color: #f4f1de;
   background: #3d405b;
   font-weight: 400;
@@ -43,80 +43,84 @@ header .menu-nav a:hover {
 
 main {
   grid-area: 2/1/span 1/span 1;
-  height: 100%;
-  overflow-y: scroll;
-}
-main::-webkit-scrollbar {
-  width: 8px;
-  background: rgba(244, 241, 222, 0.3);
-}
-main::-webkit-scrollbar-thumb {
-  border-radius: 20px;
-  background: #f4f1de;
-}
-main section {
-  width: 100%;
-  min-height: 90vh;
-  max-height: -webkit-fit-content;
-  max-height: -moz-fit-content;
-  max-height: fit-content;
-}
-main #rps {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 600;
-  font-size: 1.5rem;
+  flex-flow: wrap;
 }
-main #rps .record-board {
+main .game-card {
   margin: 30px;
-}
-main #rps .record-board form {
-  margin: 30px;
-}
-main #rps .record-board button {
-  margin: 20px;
   border: solid #f4f1de;
-  border-radius: 50%;
-  padding: 15px 20px;
-  color: #3d405b;
-  background: #f4f1de;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 1.5rem;
-}
-main #rps .record-board fieldset {
-  padding: 20px;
-}
-main #rps .record-board #result {
-  font-weight: 800;
-  font-size: 3rem;
-}
-main #rps .play-station {
-  margin: 30px;
+  border-radius: 20px;
+  width: 300px;
+  height: 400px;
+  max-width: 300px;
+  max-height: 400px;
+  flex: 0 0 100%;
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
-}
-main #rps .play-station div {
-  margin: 30px;
-}
-main #rps .play-station button {
-  margin: 20px;
-  border: solid #f4f1de;
-  border-radius: 50%;
-  padding: 15px 20px;
+  position: relative;
   color: #3d405b;
-  background: #f4f1de;
-  cursor: pointer;
-  font-weight: 800;
-  font-size: 3rem;
+  background: #f2cc8f;
+}
+main .game-card img {
+  border-radius: 50%;
+  width: 90%;
+}
+main .game-card span {
+  margin: 20px;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+main .game-card a {
+  margin: 10px;
+  border-radius: 50%;
+  padding: 15px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: rgba(61, 64, 91, 0.2);
+  color: #3d405b;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+main .game-card a:hover {
+  color: #f2cc8f;
+}
+main .game-card a:hover {
+  color: #3d405b;
+  -webkit-animation: animate 1s ease-in-out infinite;
+          animation: animate 1s ease-in-out infinite;
 }
 
 footer {
   grid-area: 3/1/span 1/span 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 10px;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    transform: translate(0px);
+  }
+  50% {
+    transform: translate(10px, -10px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(0px);
+  }
+  50% {
+    transform: translate(10px, -10px);
+  }
+  100% {
+    transform: translate(0px);
+  }
 }/*# sourceMappingURL=style.css.map */

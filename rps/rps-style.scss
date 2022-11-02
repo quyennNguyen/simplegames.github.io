@@ -1,0 +1,57 @@
+@import "../variables";
+@import "../config";
+
+body {
+    min-width: 1000px;
+    min-height: 100vh;
+    max-height: fit-content;
+    overflow: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-3;
+    background: $color-1;
+    @include subtitle;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .record-board {
+        margin: 30px;
+        
+        form {
+            margin: 30px;
+        }
+
+        fieldset {
+            padding: 20px;
+        }
+
+        // button {
+        //     @include button;
+        //     @include subtitle;
+        // }
+
+        #result {
+            @include title;
+        }
+    }
+
+    .play-station {
+        margin: 30px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+
+        div {
+            margin: 30px;
+        }
+
+        button {
+            @include button;
+            @include title;
+        }
+    }
+}

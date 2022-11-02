@@ -2,11 +2,11 @@
 @import "config";
 
 body {
-    min-width: 1100px;
-    overflow-x: scroll;
+    min-width: 1000px;
+    overflow: scroll;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 5vh 90vh 5vh;
+    grid-template-rows: 5vh auto 5vh;
     color: $color-3;
     background: $color-1;
     @include body;
@@ -29,7 +29,6 @@ header {
     }
 
     .menu-nav {
-
         a {
             margin: 0 20px;
             @include link;
@@ -39,66 +38,49 @@ header {
 
 main {
     grid-area: 2 / 1 / span 1 / span 1;
-    height: 100%;
-    overflow-y: scroll;
-
-    &::-webkit-scrollbar {
-        width: 8px;
-        background: rgba($color-3, 0.3);
-    }
-
-    &::-webkit-scrollbar-thumb {
+    display: flex;
+    flex-flow: wrap;
+    
+    .game-card {
+        margin: 30px;
+        border: solid $color-3;
         border-radius: 20px;
-        background: $color-3;
-    }
-
-    section {
-        width: 100%;
-        min-height: 90vh;
-        max-height: fit-content;
-    }
-
-    #rps {
+        width: 300px;
+        height: 400px;
+        max-width: 300px;
+        max-height: 400px;
+        flex: 0 0 100%;
         display: flex;
+        flex-flow: column;
         justify-content: center;
         align-items: center;
-        @include subtitle;
+        position: relative;
+        color: $color-1;
+        background: $color-2;
 
-        .record-board {
-            margin: 30px;
-            
-            form {
-                margin: 30px;
-            }
-
-            button {
-                @include button;
-                @include subtitle;
-            }
-
-            fieldset {
-                padding: 20px;
-            }
-
-            #result {
-                @include title;
-            }
+        img {
+            border-radius: 50%;
+            width: 90%;
         }
 
-        .play-station {
-            margin: 30px;
-            display: flex;
-            flex-flow: column;
-            justify-content: center;
-            align-items: center;
+        span {
+            margin: 20px;
+            @include subtitle;
+        }
 
-            div {
-                margin: 30px;
-            }
+        a {
+            margin: 10px;
+            border-radius: 50%;
+            padding: 15px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: rgba($color-1, 0.2);
+            @include link;
 
-            button {
-                @include button;
-                @include title;
+            &:hover {
+                color: $color-1;
+                animation: animate 1s ease-in-out infinite;
             }
         }
     }
@@ -106,7 +88,25 @@ main {
 
 footer {
     grid-area: 3 / 1 / span 1 / span 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 10px;
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(0px);
+    }
+
+    50% {
+        transform: translate(10px, -10px);
+    }
+
+    100% {
+        transform: translate(0px);
+    }
 }

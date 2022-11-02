@@ -1,0 +1,19 @@
+@import "../variables";
+@import "../config";
+
+body {
+    min-width: 1000px;
+    min-height: 100vh;
+    max-height: fit-content;
+    overflow: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-3;
+    background: $color-1;
+    @include subtitle;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

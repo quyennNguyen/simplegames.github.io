@@ -1,4 +1,3 @@
-//  rock paper scissor
 const yourRock = document.getElementById("your-rock");
 const yourPaper = document.getElementById("your-paper");
 const yourScissor = document.getElementById("your-scissor");
@@ -15,9 +14,6 @@ const targets = [
   compPaper,
   compScissor,
 ];
-
-// const setInput = document.getElementById("set-input");
-// let numOfSets = setInput.innerText;
 
 const compScore = document.getElementById("comp-score");
 const yourScore = document.getElementById("your-score");
