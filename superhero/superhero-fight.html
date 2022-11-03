@@ -11,13 +11,36 @@
 </head>
 
 <body>
-    <div id="comp-hero-set"></div>
-    <div>------------------------------------------------------------------------</div>
-    <div id="your-hero-set"></div>
-    <div class="control-btn">
+    <section class="playstation">
+        <h2>COMPUTER</h2>
+        <div id="comp-hero-set"></div>
+        <div>------------------------------------------------------------------------------------------------------------</div>
+        <div id="your-hero-set"></div>
+        <h2>YOU</h2>
+    </section>
+    <section class="record-board">
+        <form>
+            <fieldset>
+                <legend>Score</legend>
+                <p>
+                    <label for="comp-score">COMPUTER</label>
+                    <span id="comp-score">0</span>
+                </p>
+                <p>
+                    <label for="your-score">YOU</label>
+                    <span id="your-score">0</span>
+                </p>
+            </fieldset>
+        </form>
+        <form>
+            <fieldset>
+                <legend>Result</legend>
+                <p id="result"></p>
+            </fieldset>
+        </form>
         <button id="get-hero-btn">GET CARDS</button>
         <button id="clear-btn">CLEAR GAME</button>
-    </div>
+    </section>
 
     <script src="https://kit.fontawesome.com/d83c12719b.js" crossorigin="anonymous"></script>
     <script src="superhero-script.js"></script>

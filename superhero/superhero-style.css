@@ -5,41 +5,50 @@
 }
 
 body {
-  min-width: 1200px;
+  min-width: 1500px;
   min-height: 100vh;
   max-height: -webkit-fit-content;
   max-height: -moz-fit-content;
   max-height: fit-content;
   overflow: scroll;
   display: flex;
-  flex-flow: column;
   justify-content: center;
   align-items: center;
   color: #f4f1de;
-  background: #3d405b;
+  background: #000;
   font: 400 1.25rem "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 body::-webkit-scrollbar {
   display: none;
 }
-body #comp-hero-set,
-body #your-hero-set {
+body .playstation {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+body .playstation #comp-hero-set,
+body .playstation #your-hero-set {
   margin: 30px;
-  width: 1100px;
-  height: 700px;
+  width: 1000px;
+  height: 500px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   color: #3d405b;
 }
-body .control-btn {
+body .record-board {
   display: flex;
   flex-flow: column;
-  position: fixed;
-  top: 45vh;
-  right: 50px;
+  font: 600 1.5rem "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-body .control-btn button {
+body .record-board form {
+  margin: 20px;
+}
+body .record-board form fieldset {
+  padding: 10px 20px;
+}
+body .record-board button {
   margin: 20px;
   border: solid #f4f1de;
   border-radius: 50%;
