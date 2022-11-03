@@ -1,54 +1,47 @@
-const getHeroBtn = document.getElementById("get-hero-btn");
+const getCardBtn = document.getElementById("get-card-btn");
+const playBtn = document.getElementById("play-btn");
 const clearBtn = document.getElementById("clear-btn");
 
 const compHeroSet = document.getElementById("comp-hero-set");
 const yourHeroSet = document.getElementById("your-hero-set");
 
-const numOfCards = 3;
-
 const compSet = [];
 const yourSet = [];
+
+const numOfCards = 3;
 
 const ACCESS_TOKEN = 2387982781353807;
 const BASE_URL = `https://superheroapi.com/api.php/${ACCESS_TOKEN}`;
 
-getHeroBtn.onclick = () => {
-  getCompHeroSet(numOfCards);
-  getYourHeroSet(numOfCards);
+getCardBtn.onclick = () => {
+  getHeroSet(numOfCards, compHeroSet);
+  getHeroSet(numOfCards, yourHeroSet);
 };
+
+// playBtn.onclick = () => {
+  
+// };
 
 clearBtn.onclick = () => {
   compHeroSet.innerHTML = "";
   yourHeroSet.innerHTML = "";
 };
 
-const getCompHeroSet = (len) => {
-  if (compHeroSet.innerHTML.trim().length == 0) {
+const getHeroSet = (len, whose) => {
+  if (whose.innerHTML.trim().length == 0) {
     for (let i = 0; i < len; i++) {
       let num = Math.floor(Math.random() * 731) + 1;
-      compSet.push(getHero(num, compHeroSet));
-    }
-  }
-};
-
-const getYourHeroSet = (len) => {
-  if (yourHeroSet.innerHTML.trim().length == 0) {
-    for (let i = 0; i < len; i++) {
-      let num = Math.floor(Math.random() * 731) + 1;
-      yourSet.push(getHero(num, yourHeroSet));
+      getHero(num, whose);
     }
   }
 };
 
 const getHero = (id, whose) => {
-  const hero = {};
   fetch(`${BASE_URL}/${id}`)
     .then((result) => result.json())
     .then((json) => {
       whose.innerHTML += getHeroInfoStr(json);
-      hero = getHeroStat(json);
     });
-  return hero;
 };
 
 const getHeroInfoStr = (character) => {
@@ -59,17 +52,13 @@ const getHeroInfoStr = (character) => {
       return `<p>${stat}: ${character.powerstats[stat]}</p>`;
     })
     .join("");
-  let infoStr = `<div style="border: solid #f4f1de; padding: 5px; display: flex; flex-flow: column; background: #f2cc8f; cursor: pointer;"> ${name}${image}${stats} </div>`;
+  let infoStr = `<div class="hero-card" style="border: solid #f4f1de; padding: 5px; width:225px display: flex; flex-flow: column; background: #f2cc8f; cursor: pointer;"> ${name}${image}${stats} </div>`;
   return infoStr;
 };
 
-const getHeroStat = (character) => {
-  const stats = {};
-  stats.name = character.name;
-  Object.assign(stats, character.powerstats);
-  return stats;
-};
-
-const fight = () => {
-  alert("Noice Hero!");
-};
+// const getHeroStat = (character) => {
+//   const stats = {};
+//   // Object.assign(stats, character.powerstats);
+//   Object.keys(character.powerstats).forEach(stat => stats[stat] = Number(character.powerstats[stat]));
+//   return stats;
+// };
