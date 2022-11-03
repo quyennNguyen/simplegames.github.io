@@ -16,8 +16,7 @@ body {
   align-items: center;
   color: #f4f1de;
   background: #3d405b;
-  font-weight: 600;
-  font-size: 1.5rem;
+  font: 600 1.5rem "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 body::-webkit-scrollbar {
   display: none;
@@ -32,8 +31,7 @@ body .record-board fieldset {
   padding: 20px;
 }
 body .record-board #result {
-  font-weight: 800;
-  font-size: 3rem;
+  font: 800 3rem "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 body .play-station {
   margin: 30px;
@@ -53,6 +51,5 @@ body .play-station button {
   color: #3d405b;
   background: #f4f1de;
   cursor: pointer;
-  font-weight: 800;
-  font-size: 3rem;
+  font: 800 3rem "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }/*# sourceMappingURL=rps-style.css.map */

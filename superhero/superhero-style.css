@@ -5,20 +5,47 @@
 }
 
 body {
-  min-width: 1000px;
+  min-width: 1200px;
   min-height: 100vh;
   max-height: -webkit-fit-content;
   max-height: -moz-fit-content;
   max-height: fit-content;
   overflow: scroll;
   display: flex;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
   color: #f4f1de;
   background: #3d405b;
-  font-weight: 600;
-  font-size: 1.5rem;
+  font: 400 1.25rem "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 body::-webkit-scrollbar {
   display: none;
+}
+body #comp-hero-set,
+body #your-hero-set {
+  margin: 30px;
+  width: 1100px;
+  height: 700px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #3d405b;
+}
+body .control-btn {
+  display: flex;
+  flex-flow: column;
+  position: fixed;
+  top: 45vh;
+  right: 50px;
+}
+body .control-btn button {
+  margin: 20px;
+  border: solid #f4f1de;
+  border-radius: 50%;
+  padding: 15px 20px;
+  color: #3d405b;
+  background: #f4f1de;
+  cursor: pointer;
+  border-radius: 10px;
 }/*# sourceMappingURL=superhero-style.css.map */

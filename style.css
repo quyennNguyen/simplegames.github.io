@@ -12,8 +12,7 @@ body {
   grid-template-rows: 5vh auto 5vh;
   color: #f4f1de;
   background: #3d405b;
-  font-weight: 400;
-  font-size: 1.25rem;
+  font: 400 1.25rem "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 body::-webkit-scrollbar {
   display: none;
@@ -28,8 +27,7 @@ header {
   background: #f4f1de;
 }
 header .title {
-  font-weight: 800;
-  font-size: 3rem;
+  font: 800 3rem "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 header .menu-nav a {
   margin: 0 20px;
@@ -48,7 +46,7 @@ main {
 }
 main .game-card {
   margin: 30px;
-  border: solid #f4f1de;
+  border: solid #f2cc8f;
   border-radius: 20px;
   width: 300px;
   height: 400px;
@@ -57,20 +55,19 @@ main .game-card {
   flex: 0 0 100%;
   display: flex;
   flex-flow: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   position: relative;
   color: #3d405b;
   background: #f2cc8f;
 }
 main .game-card img {
-  border-radius: 50%;
-  width: 90%;
+  border-radius: 20px 20px 0 0;
+  width: 100%;
 }
 main .game-card span {
   margin: 20px;
-  font-weight: 600;
-  font-size: 1.5rem;
+  font: 600 1.5rem "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 main .game-card a {
   margin: 10px;
