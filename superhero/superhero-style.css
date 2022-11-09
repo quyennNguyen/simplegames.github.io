@@ -15,7 +15,7 @@ body {
   justify-content: center;
   align-items: center;
   color: #f4f1de;
-  background: #000;
+  background: black;
   font: 400 1.25rem "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 body::-webkit-scrollbar {
@@ -29,7 +29,7 @@ body .playstation {
 }
 body .playstation #comp-hero-set,
 body .playstation #your-hero-set {
-  margin: 30px;
+  margin: 20px;
   width: 1000px;
   height: 500px;
   display: flex;
@@ -38,19 +38,22 @@ body .playstation #your-hero-set {
   color: #3d405b;
 }
 body .record-board {
+  margin: 20px;
   display: flex;
   flex-flow: column;
-  font: 600 1.5rem "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 body .record-board form {
-  margin: 20px;
+  margin: 20px 0;
 }
 body .record-board form fieldset {
-  padding: 10px 20px;
+  padding: 20px;
+}
+body .record-board #result {
+  font: 600 1.5rem "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 body .record-board button {
   margin: 20px;
-  border: solid #f4f1de;
+  border: solid;
   border-radius: 50%;
   padding: 15px 20px;
   color: #3d405b;

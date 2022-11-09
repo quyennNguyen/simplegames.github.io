@@ -2,7 +2,7 @@
 @import "../config";
 
 body {
-    min-width: 1000px;
+    min-width: 800px;
     min-height: 100vh;
     max-height: fit-content;
     overflow: scroll;
@@ -10,43 +10,38 @@ body {
     justify-content: center;
     align-items: center;
     color: $color-3;
-    background: $color-1;
-    @include subtitle;
+    background: black;
+    @include body;
 
     &::-webkit-scrollbar {
         display: none;
     }
 
     .record-board {
-        margin: 30px;
+        margin: 20px;
         
         form {
-            margin: 30px;
-        }
+            margin: 30px 0;
 
-        fieldset {
-            padding: 20px;
+            fieldset {
+                padding: 20px;
+            }
         }
-
-        // button {
-        //     @include button;
-        //     @include subtitle;
-        // }
 
         #result {
-            @include title;
+            @include subtitle;
         }
     }
 
     .play-station {
-        margin: 30px;
+        margin: 20px;
         display: flex;
         flex-flow: column;
         justify-content: center;
         align-items: center;
 
         div {
-            margin: 30px;
+            margin: 20px;
         }
 
         button {

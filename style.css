@@ -5,42 +5,42 @@
 }
 
 body {
-  min-width: 1000px;
-  overflow: scroll;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 5vh auto 5vh;
+  min-width: 750px;
+  overflow-y: scroll;
+  display: flex;
+  flex-flow: column;
   color: #f4f1de;
   background: #3d405b;
   font: 400 1.25rem "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 body::-webkit-scrollbar {
-  display: none;
+  width: 6px;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: #f4f1de;
 }
 
 header {
-  grid-area: 1/1/span 1/span 1;
+  margin: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #3d405b;
-  background: #f4f1de;
 }
 header .title {
+  margin: 0 20px;
   font: 800 3rem "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 header .menu-nav a {
   margin: 0 20px;
   color: #3d405b;
   text-decoration: none;
-  transition: all 0.5s ease-in-out;
 }
 header .menu-nav a:hover {
   color: #f2cc8f;
 }
 
 main {
-  grid-area: 2/1/span 1/span 1;
   display: flex;
   flex-flow: wrap;
 }
@@ -76,10 +76,8 @@ main .game-card a {
   position: absolute;
   bottom: 0;
   right: 0;
-  background: rgba(61, 64, 91, 0.2);
   color: #3d405b;
   text-decoration: none;
-  transition: all 0.5s ease-in-out;
 }
 main .game-card a:hover {
   color: #f2cc8f;
@@ -91,7 +89,6 @@ main .game-card a:hover {
 }
 
 footer {
-  grid-area: 3/1/span 1/span 1;
   width: 100%;
   text-align: center;
   position: fixed;

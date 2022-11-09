@@ -2,29 +2,32 @@
 @import "config";
 
 body {
-    min-width: 1000px;
-    overflow: scroll;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 5vh auto 5vh;
+    min-width: 750px;
+    overflow-y: scroll;
+    display: flex;
+    flex-flow: column;
     color: $color-3;
     background: $color-1;
     @include body;
 
     &::-webkit-scrollbar {
-        display: none;
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 20px;
+        background: $color-3;
     }
 }
 
 header {
-    grid-area: 1 / 1 / span 1 / span 1;
+    margin: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: $color-1;
-    background: $color-3;
 
     .title {
+        margin: 0 20px;
         @include title;
     }
 
@@ -37,7 +40,6 @@ header {
 }
 
 main {
-    grid-area: 2 / 1 / span 1 / span 1;
     display: flex;
     flex-flow: wrap;
     
@@ -75,7 +77,6 @@ main {
             position: absolute;
             bottom: 0;
             right: 0;
-            background: rgba($color-1, 0.2);
             @include link;
 
             &:hover {
@@ -87,7 +88,6 @@ main {
 }
 
 footer {
-    grid-area: 3 / 1 / span 1 / span 1;
     // display: flex;
     // justify-content: center;
     // align-items: center;
